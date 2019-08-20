@@ -15,7 +15,12 @@ func _on_PinArea_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.is_pressed():
 			if locations.current_dialogue:
+				# If the last chosen one was itself, change state
+				if locations.current_dialogue == $LocationDialogue:
+					locations.current_dialogue.visible = not locations.current_dialogue.visible
+					return
+
 				locations.current_dialogue.visible = false
-				
+
 			locations.current_dialogue = $LocationDialogue
 			$LocationDialogue.visible = true
