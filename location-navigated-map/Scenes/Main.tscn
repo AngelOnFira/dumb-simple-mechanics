@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Location.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Locations.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Map.tscn" type="PackedScene" id=3]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Map" parent="." instance=ExtResource( 3 )]
+position = Vector2( -560, -452 )
+
+[node name="Locations" type="Node2D" parent="Map"]
+position = Vector2( 565.685, 453.963 )
+script = ExtResource( 2 )
+
+[node name="Location" parent="Map/Locations" instance=ExtResource( 1 )]
+position = Vector2( 70.7106, 123.037 )
+
+[node name="Location2" parent="Map/Locations" instance=ExtResource( 1 )]
+position = Vector2( 701.45, 104.652 )
+
+[node name="Location3" parent="Map/Locations" instance=ExtResource( 1 )]
+position = Vector2( 376.181, 486.49 )
+
+[node name="Location4" parent="Map/Locations" instance=ExtResource( 1 )]
+position = Vector2( 909.339, 572.757 )
+
+[node name="Location5" parent="Map/Locations" instance=ExtResource( 1 )]
+position = Vector2( 1033.79, 298.399 )
+
+[node name="Location6" parent="Map/Locations" instance=ExtResource( 1 )]
+position = Vector2( 485.075, 196.576 )
+
+[node name="Location7" parent="Map/Locations" instance=ExtResource( 1 )]
+position = Vector2( 230.517, -89.0954 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 571.342, 330.926 )
+current = true

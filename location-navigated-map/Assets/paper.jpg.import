@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/paper.jpg-01b5262d9bab5bba206ba09546b0602b.image"
+
+[deps]
+
+source_file="res://Assets/paper.jpg"
+dest_files=[ "res://.import/paper.jpg-01b5262d9bab5bba206ba09546b0602b.image" ]
+
+[params]
+
